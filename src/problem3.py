@@ -96,11 +96,19 @@ def problem3(rect, n, window):
     # TODO: 2. Implement and test this function, TESTING each step as you go.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
-    rect = rg.Rectangle(rg.Point(x, y), rg.Point(x, y))
+    window = rg.RoseWindow(x, y)
+    center = rect.get_center()
+    corner1 = rect.get_upper_left_corner()
+    corner2 = rect.get_lower_right_corner()
+    rect = rg.Rectangle(corner1, corner2)
     rect.attach_to(window)
-    center = rg.Point(x, y)
-    circle = rg.Circle((n/2), center)
+    radius = (corner2.y - corner1.y)/2
+    circle = rg.Circle(corner2, radius)
+    #Need to move forward by each diameter and move to right by 45 (n times)
+    circle.attach_to(window)
+    window.render()
+    window.continue_on_mouse_click()
+
 
 
 # -----------------------------------------------------------------------------

@@ -141,7 +141,7 @@ def problem4(m):
 
     count = 0
     for k in range(m+1):
-        if k % 2 == 0: #even
+        if k % m == 0:
             count = count + 1
     return count
 # -----------------------------------------------------------------------------
