@@ -2,8 +2,8 @@
 Exam 1, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Colleen Fulton.  March 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -120,7 +120,14 @@ def problem2(line1, line2, thickness, win):
     #   See the IMPORTANT NOTE just above the DEF line above.
     # -------------------------------------------------------------------------
 
+    window = rg.RoseWindow(400, 400)
+    line = rg.Line(rg.Point(x, y), rg.Point(x, y))
+    line.thickness = thickness
+    other_line = rg.Line(rg.Point(x, y), rg.Point(x, y))
+    other_line.thickness = thickness
 
+    line.attach_to(win)
+    window.render()
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------

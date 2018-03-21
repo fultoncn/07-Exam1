@@ -2,8 +2,8 @@
 Exam 1, problem 3.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Colleen Fulton.  March 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -96,6 +96,11 @@ def problem3(rect, n, window):
     # TODO: 2. Implement and test this function, TESTING each step as you go.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+
+    rect = rg.Rectangle(rg.Point(x, y), rg.Point(x, y))
+    rect.attach_to(window)
+    center = rg.Point(x, y)
+    circle = rg.Circle((n/2), center)
 
 
 # -----------------------------------------------------------------------------
